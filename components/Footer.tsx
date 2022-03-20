@@ -6,6 +6,7 @@ import {
   Icon,
   ComponentWithAs,
   IconProps,
+  Text,
 } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import {
@@ -54,7 +55,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="footer_container">
+    <Box w="100%" py="12">
       <Flex
         align={["center", "space-around"]}
         justify={["space-around", "center"]}
@@ -64,20 +65,23 @@ const Footer = () => {
         <Flex color="teal.500" fontWeight="normal" wrap="wrap">
           {socials.map((social: ISocial) => {
             return (
+              <Link href={social.link} key={social.link}>
               <Flex
                 key={social.link}
                 align="center"
                 justify="space-around"
-                mx="6"
+                mx={["2","6"]}
               >
-                <Icon as={social.icon} mx="2" />
-                <Link href={social.link}>{social.text}</Link>
+                <Icon as={social.icon} mx={["1","2"]} h={["7"]} w={["7"]} />
+                  <Text display={["none", "inline",]}  > {social.text} </Text> 
               </Flex>
+              </Link>
             );
           })}
         </Flex>
       </Flex>
-    </div>
+      <Text mt="4" textAlign="center" fontWeight="bold">Copyright @2021 by Sagar.</Text>
+    </Box>
   );
 };
 

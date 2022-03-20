@@ -9,7 +9,6 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <title>Sagar Dev</title>
           <meta name="description" content="Portfolio of Sagar dhandhalya" />
         </Head>
         <body>

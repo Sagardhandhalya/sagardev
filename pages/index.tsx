@@ -1,23 +1,21 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Text, Box, UnorderedList, ListItem, Flex } from "@chakra-ui/react";
-import Header from "../components/Header";
-import SocialLinks from "../components/Footer";
+import { Flex, Link, Button, Icon } from "@chakra-ui/react";
 import Intro from "../components/Intro";
 import CoolCanvas from "../components/CoolCanvas";
 import TimeLine from "../components/TimeLine";
-import Skills from "../components/Skills";
-import Footer from "../components/Footer";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 const Home: NextPage = () => {
   return (
-    <Flex direction="column" mx={[0, "20%"]} align="center">
+    <Flex direction="column" align="center">
+      <CoolCanvas />
       <Intro />
-      <Skills />
+      <Link href="/projects" my="8">
+        <Button>
+          Projects <ArrowForwardIcon mx="1" />
+        </Button>
+      </Link>
       <TimeLine />
-      <Footer />
     </Flex>
   );
 };

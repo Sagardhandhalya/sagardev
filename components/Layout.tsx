@@ -1,14 +1,13 @@
-import Head from "next/head";
 import React from "react";
-import CoolCanvas from "./CoolCanvas";
+import Footer from "./Footer";
 import Header from "./Header";
-
+import {Box} from '@chakra-ui/react'
 const Layout = ({ children }: any) => {
   return (
     <>
       <Header />
-      <CoolCanvas />
-      {children}
+     <Box  mx={[0, "10%"]} mt="10vh">{children}</Box> 
+      <Footer />
     </>
   );
 };
