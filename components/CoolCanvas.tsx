@@ -3,10 +3,12 @@ import { OrbitControls } from "@react-three/drei";
 import { useRef, useState } from "react";
 
 function Box(props: any) {
-  const ref = useRef();
+  const ref = useRef<any>();
   const [clicked, click] = useState(false);
   useFrame((state, delta) =>{
-    ref.current.rotation.y+= 0.02
+    if (ref.current != undefined){
+      ref.current.rotation.y += 0.02
+    }
   } );
   return (
     <mesh
