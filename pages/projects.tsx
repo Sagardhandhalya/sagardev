@@ -1,6 +1,11 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
-import chess from "./../public/images/chess.jpeg";
+import familyGraph from "./../public/images/family_graph.png";
+import mblog from "./../public/images/mblog.png"
+import faceb from "./../public/images/faceb.png"
+import canva from "./../public/images/canva.png"
+import ecomf from "./../public/images/ecomf.png"
+import dwitter from "./../public/images/dwitter.png"
 
 export interface IProject {
   title: string;
@@ -13,28 +18,69 @@ export interface IProject {
 const Projects = () => {
   const myProjects: IProject[] = [
     {
-      title: "First Project",
+      title: "Ecommerce Website",
       descreption:
-        "lorem vent - compiled client and server successfully in 310 ms (640 modules) wait  - compiling...event - compiled successfully in 77 ms (604 modules)",
-      imageUrl: chess,
-      url: "https://media.istockphoto.com/photos/chess-pieces-picture-id956930910?k=20&m=956930910&s=612x612&w=0&h=wvXlIeZkKtREsAzTPFfo5NfrAjtkC45DACuXjmphjIk=",
-      tags: ["React Js", "Node Js"],
+        "Full stack application built with Golang,React and MYSQL. where you can store hierarchical data and visualize it.",
+      imageUrl: familyGraph,
+      url: "https://github.com/Sagardhandhalya/go-full-stack",
+      tags: ["React Js", "Go", "MYSQL"],
     },
     {
-      title: "First Project123",
+      title: "Family graph visualization",
       descreption:
-        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, ",
-      imageUrl: chess,
-      url: "https://media.istockphoto.com/photos/chess-pieces-picture-id956930910?k=20&m=956930910&s=612x612&w=0&h=wvXlIeZkKtREsAzTPFfo5NfrAjtkC45DACuXjmphjIk=",
-      tags: ["React Js", "Node Js"],
+        "Full stack application built with Golang,React and MYSQL. where you can store hierarchical data and visualize it.",
+      imageUrl: familyGraph,
+      url: "https://github.com/Sagardhandhalya/go-full-stack",
+      tags: ["React Js", "Go", "MYSQL"],
     },
+    {
+      title: "Ecommerce Application",
+      descreption:
+        "Ecommerce Application built with flutter and firebase, It has all the functionality like push notification,cart, product listing etc. ",
+      imageUrl: ecomf,
+      url: "https://github.com/Sagardhandhalya/ecom_app_flutter",
+      tags: ["Flutter", "Firebase", "dart"],
+    },
+    {
+      title: "Decentralized twitter",
+      descreption:
+        "Twitter like application, where user can post text content built on top of ethereum blockchain with react in frontend.other user will able to tip other user in ether.",
+      imageUrl: dwitter,
+      url: "https://github.com/Sagardhandhalya/Dwitter",
+      tags: ["Truffle", "Ganache", "Metamask", "React js"],
+    },
+    {
+      title: "Markdown Blog",
+      descreption:
+        "Platform where you can write blog with help of markdown syntax.built with Node JS.",
+      imageUrl: mblog,
+      url: "https://github.com/Sagardhandhalya/Blog-from-markdown",
+      tags: ["Ejs", "Node Js"],
+    },
+    {
+      title: "video chat application face blur",
+      descreption:
+        "Video chat applications where face will be blur with help of face detection.",
+      imageUrl: faceb,
+      url: "https://github.com/Sagardhandhalya/faceblur",
+      tags: ["HTML", "CSS", "JavaScript", "Webrtc"],
+    },
+    {
+      title: "Draw and Download",
+      descreption:
+        "• Online white board where you can write, draw and import images, it has build in video.build with HTML,CSS and JS.",
+      imageUrl: canva,
+      url: "https://sagardhandhalya.github.io/Canvas_Draw_and_Download/",
+      tags: ["HTML", "CSS", "JavaScript", "Canvas Api"],
+    },
+
   ];
   return (
     <>
-     <Heading
+      <Heading
         as="h1"
         size="md"
-       textAlign="center"
+        textAlign="center"
         fontWeight="bold"
         textDecoration="underline"
         textDecorationColor="blue.200"
@@ -44,18 +90,18 @@ const Projects = () => {
       >
         Projects
       </Heading>
-       <Flex
-      direction={["column", "row"]}
-      align={["", "space-around"]}
-      justify={["", "center"]}
-      wrap="wrap"
-    >
-      {myProjects.map((project: IProject) => (
-        <ProjectCard key={project.title} project={project} />
-      ))}
-    </Flex>
+      <Flex
+        direction={["column", "row"]}
+        align={["", "space-around"]}
+        justify={["", "center"]}
+        wrap="wrap"
+      >
+        {myProjects.map((project: IProject) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </Flex>
     </>
-   
+
   );
 };
 
