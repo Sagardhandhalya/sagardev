@@ -17,7 +17,7 @@ const TimeLine = () => {
   const {colorMode} = useColorMode()
   const timeLineData: IEvent[] = [
     {
-      title: "web development engineer",
+      title: "Web development engineer",
       subtitle: "Pickrr, Gurgaon",
       descreption: "Working as full time Frontend engineere with React stack.",
       date: "June 2022 - present",
