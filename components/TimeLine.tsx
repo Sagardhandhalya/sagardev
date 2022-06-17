@@ -17,10 +17,17 @@ const TimeLine = () => {
   const {colorMode} = useColorMode()
   const timeLineData: IEvent[] = [
     {
+      title: "web development engineer",
+      subtitle: "Pickrr, Gurgaon",
+      descreption: "Working as full time Frontend engineere with React stack.",
+      date: "June 2022 - present",
+      type: "work",
+    },
+    {
       title: "Software Engineer",
       subtitle: "Searce Inc, Bangolore",
       descreption: "Working as full time software engineer at Searce Inc.",
-      date: "July 2021 - present",
+      date: "July 2021 - May 2021",
       type: "work",
     },
     {

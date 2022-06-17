@@ -7,13 +7,15 @@ coverImage: /images/post/javascript.png
 tags: javaScript, Interview
 ---
 
-# Basic.
+### Basic.
 
 ###  **__```How java script Work .. !! ..```__**
 
 Now java script run by the java script engine like c++ run by it's compiler and convert c++ code in machine code same way java script engine convert js code into the machine code. In nut shell js engine has to main thing to manage 
-                                                   1. call stack
-                                                    2. Memory heap
+
+        1. call stack
+        2. Memory heap
+
 Now call stack is basically a stack that will manage order in function is run. current runnung function will be on top of the stack . let tack example we have function one inside has function  two and in function to has console log inside it, we called function two from function one, so call stack from top to bottom will be console, two,one.
 
 Memory heap is place where js engine store all there variable and function definition.
@@ -21,10 +23,13 @@ Memory heap is place where js engine store all there variable and function defin
  Now when we run js in browser , browser is not just js engine it is **java script run time environment** there is clear difference in the  engine and run time environment.
 
 ```     
-                           Js engine :Memory heap + call stack
-                           Js run time environment  : Js engine + Eventloop + Web Api + Callback Queue (Browser itself)
+    Js engine :Memory heap + call stack
+    Js run time environment  : Js engine + Eventloop + Web Api + Callback Queue (Browser itself)
 ```
+
 Now let's why we need this Web api , event loop and call back queue . purpose of this things are to run async Js code because of this functionality  java script is the __single threaded but non blocking__ Let take example to explain this sentance.
+<br/>
+
 ``` java script
 console.log(1);
 setTimeout(() => {
@@ -47,39 +52,35 @@ Java script engine do not have set time out function so when ever the set time o
 Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Inevitably, this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
 
 ```java script
-         1. function expression 
+    1. function expression 
                             
-                          var expression = function() {
-                                             console.log('Will this work?');
-                                        };
+        var expression = function(){ console.log('Will this work?');};
                             
-          2. function declaration 
+    2. function declaration 
                              
-                                function hoisted() {
-                                      console.log('This function has been hoisted.');
-                                  };
-                            
+        function hoisted() { console.log('This function has been hoisted.');};
 
+    this is the order
+    
+    var double = 22;
+    
+    function double(num) {
+      return (num*2);
+    }
+    
+    console.log(typeof double); // Output: number
+    
+    var double;
+    
+    function double(num) {
+      return (num*2);
+    }
 
-this is the order
-
- var double = 22;
-
-function double(num) {
-  return (num*2);
-}
-
-console.log(typeof double); // Output: number
-
-var double;
-
-function double(num) {
-  return (num*2);
-}
-
-console.log(typeof double); // Output: function
+    console.log(typeof double); // Output: function
 
 ```
+
+
 Bare in mind function declaration is hoisted but function expression will not.
 
 ## 3. sync vs Async [video](https://www.youtube.com/watch?v=hGSHfObcVf4)
@@ -447,7 +448,9 @@ person2Display(); // Prints Name: Paul Adams
 
 2. First js runtime engin was spider monkey.
 
-3. V8 has 2 compilers, Full-Codegen and Crankshaft. Full-Codegen parses JavaScript directly to machine code, without an intermediary language, allowing it to begin execution sooner. A JIT compiler called Crankshaft produces optimized code for hot methods. This means that in the same V8 program, different levels of optimized code coexist at the same time.
+3. V8 has 2 compilers, Full-Codegen and Crankshaft. Full-Codegen parses JavaScript directly to machine code, 
+without an intermediary language, allowing it to begin execution sooner. A JIT compiler called Crankshaft produces optimized code for hot methods.
+ This means that in the same V8 program, different levels of optimized code coexist at the same time.
 
 
 # Java script code snippet to solve
@@ -662,7 +665,12 @@ Design patterns are solutions to general problems that software developers faced
 
 #### 1. Null Object pattern :
 
-Often you return object of a class and the function which using this object where you have to check that object is not null, every time you have to write this check , to avoid this we can use this pattern. So the solution is if you are returning object USER of the user class , make other class call NULLUSER and set all the default value of user in this class like name will be guest , profile photo url can be some avatar logo, now whenever you return null user return instead of object of the nulluser class So now no need to check every time.
+Often you return object of a class and the function which using this object where you have to 
+check that object is not null, every time you have to write this check , to avoid this we can use
+ this pattern. So the solution is if you are returning object USER of the user class , make other 
+ class call NULLUSER and set all the default value of user in this class like name will be guest ,
+  profile photo url can be some avatar logo, now whenever you return null user return instead of 
+  object of the nulluser class So now no need to check every time.
 
 #### 2. Builder pattern :
 
