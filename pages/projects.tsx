@@ -96,14 +96,16 @@ const Projects = () => {
         textDecorationColor="blue.200"
         textDecorationThickness="5px"
         textUnderlineOffset="6px"
-        my="12">
+        my="12"
+      >
         Projects
       </Heading>
       <Flex
         direction={["column", "row"]}
         align={["", "space-around"]}
         justify={["", "center"]}
-        wrap="wrap">
+        wrap="wrap"
+      >
         {myProjects.map((project: IProject) => (
           <ProjectCard key={project.title} project={project} />
         ))}

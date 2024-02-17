@@ -7,10 +7,8 @@ export default function useBoxShadow(): string[] {
   const lightHoverShadow = "rgba(255, 255, 255, 0.4) 0px 5px 10px";
   const { colorMode } = useColorMode();
   if (colorMode === "dark") {
-    console.log("dark");
     return ["", lightHoverShadow];
   } else {
-    console.log("lighr");
     return [darkShadow, darkHoverShadow];
   }
 }

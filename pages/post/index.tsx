@@ -52,15 +52,5 @@ export async function getStaticProps() {
   const notionService = new NotionService();
   const posts = await notionService.getPublishedBlogPosts();
 
-  const files = fs.readdirSync(path.join("posts"));
-  const meta = files.map((file) => {
-    const slug = file.replace(".md", "");
-    const fileData = fs.readFileSync(path.join("posts", file), "utf-8");
-    const metadata = matter(fileData);
-    metadata.data["slug"] = slug;
-
-    return metadata.data;
-  });
-
-  return { props: { posts: [...meta, ...posts] } };
+  return { props: { posts: posts } };
 }

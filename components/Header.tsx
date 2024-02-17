@@ -27,7 +27,8 @@ const Header = () => {
       top="0px"
       zIndex="99"
       w="100%"
-      style={{ backdropFilter: "blur(10px)" }}>
+      style={{ backdropFilter: "blur(10px)" }}
+    >
       <Flex align="center" justify="space-around" mt="4">
         <Flex align="center">
           <Link href="/" mb="-2" mr="2">
@@ -43,8 +44,9 @@ const Header = () => {
             variant="outline"
             mr="4"
             spacing="3"
-            colorScheme="blue">
-            <Link href="/blog">
+            colorScheme="blue"
+          >
+            <Link href="/post">
               <Button>Blogs</Button>
             </Link>
             <Link href="/projects">
@@ -65,19 +67,22 @@ const Header = () => {
               position="absolute"
               top="60px"
               right="100px"
-              display={["inline", "inline", "none", "none"]}>
+              display={["inline", "inline", "none", "none"]}
+            >
               <Flex
                 direction="column"
                 shadow="lg"
                 justify="strech"
                 width="100px"
-                borderRadius="md">
+                borderRadius="md"
+              >
                 <Link
                   href="/blog"
                   my="2"
                   textAlign="center"
                   textDecor="none"
-                  outline="none">
+                  outline="none"
+                >
                   Blogs
                 </Link>
                 <Divider />
@@ -86,7 +91,8 @@ const Header = () => {
                   my="2"
                   textAlign="center"
                   textDecor="none"
-                  outline="none">
+                  outline="none"
+                >
                   Projects
                 </Link>
               </Flex>
