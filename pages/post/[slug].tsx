@@ -54,11 +54,9 @@ const Post = ({
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const notionService = new NotionService();
-  console.log(context.params?.slug);
 
   // @ts-ignore
   const p = await notionService.getSingleBlogPost(context.params?.slug);
-  console.log(p, "---------------");
 
   if (!p) {
     throw "";

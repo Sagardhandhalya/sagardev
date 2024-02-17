@@ -3,11 +3,10 @@ import Image from "next/image";
 import { title } from "process";
 import React, { FC } from "react";
 import useBoxShadow from "../hooks/useBoxShadow";
-import { IPost } from "../pages/blog";
+import { IPost } from "../blog";
 
 const PostCard: FC<{ post: IPost }> = ({ post }) => {
   const [shadow, hoverShadow] = useBoxShadow();
-  console.log(post);
 
   return (
     <a href={`/post/${post.slug}`}>

@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { marked } from "marked";
-import NotionService from "../../services/notion.service";
+import NotionService from "../services/notion.service";
 const Blog: FC<{ slug: string; content: string; metadata: IPost }> = ({
   slug,
   metadata,
@@ -38,7 +38,7 @@ export async function getStaticProps(context: any) {
     const markdownWithMeta = fs.readFileSync(path.join("posts", slug + ".md"));
     const { data: metadata, content } = matter(markdownWithMeta);
     return { props: { slug, content, metadata } };
-  } catch (e) {
+  } catch (e: any) {
     if (e?.code === "ENOENT") {
       const notionService = new NotionService();
       const p = await notionService.getSingleBlogPost(context.params?.slug);

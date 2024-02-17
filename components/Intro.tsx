@@ -1,10 +1,14 @@
 import { Flex, Heading, Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import me from "./../public/me.jpeg";
 const Intro = () => {
   return (
     <Box w={["90%", "70%"]}>
-      <Flex direction={['column', 'row']} justify={["center", "space-between"]} align={["center","center"]} w="100%">
+      <Flex
+        direction={["column", "row"]}
+        justify={["center", "space-between"]}
+        align={["center", "center"]}
+        w="100%"
+      >
         <div>
           <Heading as="h1" size="2xl">
             Sagar Dhandhalya
@@ -13,11 +17,22 @@ const Intro = () => {
             Software Engineer, Farmer, Cinephile
           </Heading>
         </div>
-        <Box as="div" borderRadius="full" width="150px" mt={['5']}  overflow="hidden">
-          <Image src={me} alt="Sagar Dhandhalya" />
+        <Box
+          as="div"
+          borderRadius="full"
+          width="150px"
+          mt={["5"]}
+          overflow="hidden"
+        >
+          <Image
+            src="/me.jpeg"
+            alt="Sagar Dhandhalya"
+            width={200}
+            height={200}
+          />
         </Box>
       </Flex>
-      <Flex  justify="center" align="center">
+      <Flex justify="center" align="center">
         <Box>
           <Heading
             as="h3"

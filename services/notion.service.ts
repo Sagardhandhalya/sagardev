@@ -1,7 +1,7 @@
 import { Client } from "@notionhq/client";
 import { BlogPost, PostPage } from "../@types/schema";
 import { NotionToMarkdown } from "notion-to-md";
-import { IPost } from "../pages/blog";
+import { IPost } from "../blog";
 
 export default class NotionService {
   client: Client;
@@ -12,7 +12,7 @@ export default class NotionService {
     this.n2m = new NotionToMarkdown({ notionClient: this.client });
   }
 
-  async getPublishedBlogPosts(): Promise<BlogPost[]> {
+  async getPublishedBlogPosts(): Promise<IPost[]> {
     const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
     // list blog posts
     const response = await this.client.databases.query({
@@ -79,7 +79,6 @@ export default class NotionService {
 
   private static pageToPostTransformer(page: any): IPost {
     let cover = page.cover;
-    console.log(cover);
 
     switch (cover?.type) {
       case "file":

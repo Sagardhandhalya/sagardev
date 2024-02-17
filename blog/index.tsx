@@ -3,8 +3,8 @@ import React, { FC } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import PostCard from "../../components/PostCard";
-import NotionService from "../../services/notion.service";
+import PostCard from "../components/PostCard";
+import NotionService from "../services/notion.service";
 import { log } from "console";
 export interface IPost {
   id?: string;

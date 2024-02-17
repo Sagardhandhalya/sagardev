@@ -6,7 +6,6 @@ import faceb from "./../public/images/faceb.png";
 import canva from "./../public/images/canva.png";
 import ecomf from "./../public/images/ecomf.png";
 import dwitter from "./../public/images/dwitter.png";
-import ecomWeb from "./../public/images/ecomweb.jpeg";
 import portf from "./../public/images/p.png";
 
 export interface IProject {
@@ -24,7 +23,7 @@ const Projects = () => {
     {
       title: "Ecommerce Website",
       descreption: "Ecommerce web application with react js.",
-      imageUrl: ecomWeb,
+      imageUrl: dwitter,
       url: "https://github.com/Sagardhandhalya/Ecom_web_application",
       tags: ["React Js", "Django", "postgres"],
     },
