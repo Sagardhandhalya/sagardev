@@ -35,11 +35,11 @@ const Post = ({
           alt="logo"
           className="my-8"
         />
-        <main className="max-w-5xl mx-auto relative">
+        <main className="max-w-5xl sm:mx-auto relative ">
           <div className="flex items-center justify-center">
             <article>
               <div
-                className={`prose sm:prose-xl ${
+                className={`mx-16 prose sm:prose-xl sm:m-auto ${
                   colorMode === "light" ? "" : "prose-invert"
                 }`}
                 dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
