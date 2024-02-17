@@ -77,7 +77,7 @@ const Header = () => {
                 borderRadius="md"
               >
                 <Link
-                  href="/blog"
+                  href="/post"
                   my="2"
                   textAlign="center"
                   textDecor="none"
