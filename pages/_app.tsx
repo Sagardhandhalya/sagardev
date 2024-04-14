@@ -20,6 +20,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Sagar Dev</title>
         <meta name="description" content="Portfolio of Sagar dhandhalya" />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-2456006984415737"
+        ></meta>
       </Head>
       <Layout>
         <CSSReset />
