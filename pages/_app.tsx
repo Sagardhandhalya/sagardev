@@ -17,6 +17,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   gtag('config', 'G-ETNNYD0N93');`}
       </Script>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2456006984415737"
+        crossOrigin="anonymous"
+      ></Script>
       <Head>
         <title>Sagar Dev</title>
         <meta name="description" content="Portfolio of Sagar dhandhalya" />
