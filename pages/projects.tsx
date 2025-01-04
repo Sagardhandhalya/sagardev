@@ -7,6 +7,9 @@ import canva from "./../public/images/canva.png";
 import ecomf from "./../public/images/ecomf.png";
 import dwitter from "./../public/images/dwitter.png";
 import portf from "./../public/images/p.png";
+import gamesKraft from "./../public/images/gamesKraft.png";
+import one from "./../public/images/oneImpression.png";
+import syndicate from "./../public/images/syndicate.png";
 
 export interface IProject {
   title: string;
@@ -20,6 +23,27 @@ const Projects = () => {
   const { colorMode } = useColorMode();
 
   const myProjects: IProject[] = [
+    {
+      title: "One Impression App (One Impression)",
+      descreption: "I created gameskraft design team website, with react and framer motion",
+      imageUrl: one,
+      url: "https://play.google.com/store/apps/details?id=com.oneimpression.creator&hl=en",
+      tags: ["React native", "Android & IOS app"],
+    },
+    {
+      title: "Gameskraft Design team website",
+      descreption: "I created gameskraft design team website, with react and framer motion",
+      imageUrl: gamesKraft,
+      url: "https://design.gameskraft.com/",
+      tags: ["React Js", "Framer Motion", "Animation"],
+    },
+    {
+      title: "Syndicate App (property pistol)",
+      descreption: "Ecommerce web application with react js.",
+      imageUrl: syndicate,
+      url: "https://play.google.com/store/apps/details?id=com.brokerapp.mobile&hl=en",
+      tags: ["React native", "Android & IOS app"],
+    },
     {
       title: "Ecommerce Website",
       descreption: "Ecommerce web application with react js.",
@@ -53,16 +77,14 @@ const Projects = () => {
     },
     {
       title: "Markdown Blog",
-      descreption:
-        "Platform where you can write blog with help of markdown syntax.built with Node JS.",
+      descreption: "Platform where you can write blog with help of markdown syntax.built with Node JS.",
       imageUrl: mblog,
       url: "https://github.com/Sagardhandhalya/Blog-from-markdown",
       tags: ["Ejs", "Node Js"],
     },
     {
       title: "video chat application face blur",
-      descreption:
-        "Video chat applications where face will be blur with help of face detection.",
+      descreption: "Video chat applications where face will be blur with help of face detection.",
       imageUrl: faceb,
       url: "https://github.com/Sagardhandhalya/faceblur",
       tags: ["HTML", "CSS", "JavaScript", "Webrtc"],
@@ -99,12 +121,7 @@ const Projects = () => {
       >
         Projects
       </Heading>
-      <Flex
-        direction={["column", "row"]}
-        align={["", "space-around"]}
-        justify={["", "center"]}
-        wrap="wrap"
-      >
+      <Flex direction={["column", "row"]} align={["", "space-around"]} justify={["", "center"]} wrap="wrap">
         {myProjects.map((project: IProject) => (
           <ProjectCard key={project.title} project={project} />
         ))}
