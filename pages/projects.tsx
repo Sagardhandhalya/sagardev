@@ -25,7 +25,7 @@ const Projects = () => {
   const myProjects: IProject[] = [
     {
       title: "One Impression App (One Impression)",
-      descreption: "I created gameskraft design team website, with react and framer motion",
+      descreption: "Creator app where creator can apply and track their campaign journey",
       imageUrl: one,
       url: "https://play.google.com/store/apps/details?id=com.oneimpression.creator&hl=en",
       tags: ["React native", "Android & IOS app"],
